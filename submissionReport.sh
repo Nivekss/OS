@@ -12,6 +12,6 @@ do
 		cnt=$nr
 	fi
 	echo -n "Student ${id%/} has suibmitted $cnt solution(s): "
-	ls ./$id | egrep -o [0-9]+ | tr "\n" " "
+	ls ./$id | head -$cnt | egrep -o [0-9]+ | tr "\n" " "
 	echo ""	
 done
